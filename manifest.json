@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "EUDI Verifier Demo UI",
+  "version": "1.0",
+  "description": "Customize the verifier UI.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": [
+    "https://verifier.eudiw.dev/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://verifier.eudiw.dev/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["injected.js", "img/eidas-logos.png", "img/george-dashboard.jpg"],
+    "matches": ["<all_urls>"]
+  }]
+}
